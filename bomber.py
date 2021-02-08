@@ -64,7 +64,7 @@ while True:
 
 	try:
 		requests.post('https://www.delivery-club.ru/ajax/user_otp', data={"phone": _phone})
-		print(Fore.GREEN + 'Dilevery')
+		print('Dilevery')
 	except:
 		pass
 	try:
