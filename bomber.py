@@ -6,6 +6,8 @@ import sys
 import os
 iteration = 0
 diskfe = "7########"
+online = "13 services available"
+print(diskfe+"\n"+online)
 _phone = input("phone: ")
 es = ""
 er = " "
