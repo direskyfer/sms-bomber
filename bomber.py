@@ -17,6 +17,8 @@ logo = '''
 +--{×=============>
 https://github.com/direskyfer/
 +--{×=============>
+
+test phone --> 79896796607
 '''
 diskfe = "7########"
 print(dark+"")
